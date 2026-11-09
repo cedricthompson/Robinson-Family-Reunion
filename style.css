@@ -86,6 +86,14 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.15;
   padding: 22px; border-top: 5px solid var(--maroon);
 }
 .day:nth-child(2) { border-top-color: var(--gold); }
+.day-photos {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  margin: -22px -22px 18px;
+}
+.day-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.day { overflow: hidden; }
+footer .credits { margin-top: 18px; font-size: .75rem; opacity: .65; max-width: 720px; margin-left: auto; margin-right: auto; }
+footer .credits a { color: inherit; }
 .day-name { margin: 0; font-family: "Playfair Display", serif; font-size: 1.5rem; font-weight: 800; color: var(--maroon-deep); }
 .day-date { margin: 0 0 10px; font-size: .78rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
 .day h4 { margin: 0 0 8px; font-size: 1.05rem; color: var(--maroon); }
