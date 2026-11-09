@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robinson Family Reunion</title>
+  <meta name="description" content="Photos and memories from the Robinson Family Reunion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Robinson <span>Family Reunion</span></a>
+    <nav>
+      <a href="#next">Next Reunion</a>
+      <a href="#slideshow">Slideshow</a>
+      <a href="#reunions">Reunions</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">One family · many generations</p>
+      <h1>The Robinson<br><em>Family Reunion</em></h1>
+      <p class="motto">“Love Comes Easy!”</p>
+      <a class="hero-cta" href="#next">Next stop: South Jersey →</a>
+    </section>
+
+    <section id="next" class="next-reunion">
+      <p class="card-tag">Our next reunion</p>
+      <h2>South Jersey</h2>
+      <p class="next-date">Dates coming soon</p>
+      <div class="hotel">
+        <p class="hotel-label">Family hotel</p>
+        <p class="hotel-name">Hilton Garden Inn Mt. Laurel</p>
+        <p>Mount Laurel, New Jersey</p>
+        <a class="hotel-link" href="https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+Mt.+Laurel+New+Jersey" target="_blank" rel="noopener">View on map</a>
+      </div>
+      <p class="sub">Check back for dates, room-block details, and the schedule of events.</p>
+    </section>
+
+    <section id="slideshow" class="slideshow" aria-roledescription="carousel" aria-label="Reunion photos">
+      <div class="slides" id="slides"></div>
+      <button class="nav prev" id="prev" aria-label="Previous photo">‹</button>
+      <button class="nav next" id="next" aria-label="Next photo">›</button>
+      <div class="controls">
+        <span class="caption" id="caption"></span>
+        <button class="play" id="play" aria-label="Pause slideshow">❚❚</button>
+        <span class="counter" id="counter"></span>
+      </div>
+    </section>
+
+    <section id="reunions" class="reunions">
+      <h2>Our Reunions</h2>
+      <div class="cards">
+        <article class="card">
+          <p class="card-tag">2026</p>
+          <h3>Varnville, South Carolina</h3>
+          <p class="card-date">July 3–5, 2026</p>
+          <p>Three days of dancing, singing, good food and catching up in the fellowship hall — from the youngest cousins to the elders leading the songs.</p>
+        </article>
+        <article class="card">
+          <p class="card-tag">15th Reunion</p>
+          <h3>New Orleans, Louisiana</h3>
+          <p class="card-date">“Love Comes Easy!”</p>
+          <p>Purple, green and gold shirts all over the French Quarter: Jackson Square, the mule carriages, the bus tour and a family feast.</p>
+        </article>
+        <article class="card card-next">
+          <p class="card-tag">Next</p>
+          <h3>South Jersey</h3>
+          <p class="card-date">Hilton Garden Inn, Mt. Laurel, NJ</p>
+          <p>Our next gathering. Dates and the schedule are coming soon. <a href="#next">See details</a>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Photo Gallery</h2>
+      <p class="sub">Tap any photo to see it bigger.</p>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="motto">“Love Will Keep Us Together”</p>
+    <p>Robinson Family Reunion</p>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Photo viewer">
+    <button class="close" id="close" aria-label="Close">×</button>
+    <img id="lightbox-img" alt="">
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
