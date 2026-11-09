@@ -79,7 +79,8 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.15;
 .hotel-link { display: inline-block; margin-top: 12px; color: var(--maroon); font-weight: 600; }
 .next-reunion .sub { margin: 0; }
 .next-reunion { max-width: 1040px; }
-.next-reunion .hotel { margin-bottom: 40px; }
+.next-reunion .hotel { margin-bottom: 20px; }
+.next-reunion .hotel.travel { margin-bottom: 40px; border-top-color: var(--maroon); }
 .schedule-title { font-size: 1.6rem; color: var(--maroon); margin: 0 0 18px; }
 .schedule {
   display: grid; grid-template-columns: 1fr;
@@ -99,6 +100,23 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.15;
 }
 .day-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
 .day { overflow: hidden; }
+.fees { max-width: 560px; margin: 16px auto 24px; }
+.fee-table {
+  width: 100%; border-collapse: collapse; text-align: left;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+}
+.fee-table th, .fee-table td { padding: 12px 18px; border-bottom: 1px solid var(--line); }
+.fee-table tr:last-child th, .fee-table tr:last-child td { border-bottom: none; }
+.fee-table th { font-weight: 600; color: var(--maroon-deep); }
+.fee-table th span { display: block; font-weight: 400; font-size: .85rem; color: var(--muted); }
+.fee-table td { text-align: right; font-family: "Playfair Display", serif; font-size: 1.3rem; font-weight: 800; color: var(--maroon); white-space: nowrap; }
+.fee-table td.incl { font-family: "Inter", sans-serif; font-size: .95rem; font-weight: 600; color: #2f7a4a; }
+.register-btn {
+  display: inline-block; margin-top: 20px; padding: 14px 32px; border-radius: 999px;
+  background: var(--maroon); color: var(--cream); font-weight: 600; font-size: 1.05rem; text-decoration: none;
+}
+.register-btn:hover { background: var(--maroon-deep); }
+.hero-register { margin-left: 8px; background: var(--cream); color: var(--maroon-deep); }
 footer .credits { margin-top: 18px; font-size: .75rem; opacity: .65; max-width: 720px; margin-left: auto; margin-right: auto; }
 footer .credits a { color: inherit; }
 .day-name { margin: 0; font-family: "Playfair Display", serif; font-size: 1.5rem; font-weight: 800; color: var(--maroon-deep); }
