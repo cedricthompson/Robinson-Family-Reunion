@@ -90,6 +90,15 @@
     <p>Robinson Family Reunion</p>
   </footer>
 
+  <button class="music-btn" id="music-btn" aria-expanded="false" aria-controls="music-panel">♪ Play “Family Reunion”</button>
+  <div class="music-panel" id="music-panel" hidden>
+    <div class="music-head">
+      <span>♪ The O’Jays – “Family Reunion”</span>
+      <button class="music-close" id="music-close" aria-label="Stop music and close">×</button>
+    </div>
+    <div class="music-player"><div id="yt-player"></div></div>
+  </div>
+
   <dialog id="lightbox" aria-label="Photo viewer">
     <button class="close" id="close" aria-label="Close">×</button>
     <img id="lightbox-img" alt="">
