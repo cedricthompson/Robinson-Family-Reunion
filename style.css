@@ -168,6 +168,12 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.15;
 }
 .hotel-btn:hover { background: var(--maroon-deep); border-color: var(--maroon-deep); }
 .hotel-btn.outline { background: transparent; color: var(--maroon); }
+.hotel-btn.book { background: var(--gold); border-color: var(--gold); color: var(--maroon-deep); }
+.hotel-btn.book:hover { background: #e8b858; border-color: #e8b858; }
+.hotel-rate-big { margin: 12px 0 0 !important; color: var(--maroon-deep); }
+.hotel-rate-big strong { font-family: "Playfair Display", serif; font-size: 2rem; font-weight: 800; color: var(--maroon); }
+.hotel-rate-big span { display: block; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.hotel-small { margin-top: 10px !important; font-size: .8rem; color: var(--muted); }
 .hotel-btn.outline:hover { background: var(--maroon); color: var(--cream); }
 .fees { max-width: 560px; margin: 16px auto 24px; }
 .fee-table {
