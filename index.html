@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
 </head>
 <body>
@@ -69,8 +69,11 @@
       <div class="hotel">
         <p class="hotel-label">Family hotel</p>
         <p class="hotel-name">Hilton Garden Inn Mt. Laurel</p>
-        <p>Mount Laurel, New Jersey</p>
-        <a class="hotel-link" href="https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+Mt.+Laurel+New+Jersey" target="_blank" rel="noopener">View on map</a>
+        <p>4000 Atrium Way, Mount Laurel, NJ 08054</p>
+        <p class="hotel-perks">Indoor pool · fitness center · free parking · free Wi-Fi · breakfast included for our group</p>
+        <p class="hotel-rate">Room rates per night: <strong>coming soon</strong></p>
+        <a class="hotel-link" href="https://www.hilton.com/en/hotels/phlmtgi-hilton-garden-inn-mt-laurel/" target="_blank" rel="noopener">Visit the hotel website</a>
+        <a class="hotel-link" href="https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+Mt.+Laurel+4000+Atrium+Way+Mount+Laurel+NJ" target="_blank" rel="noopener">View on map</a>
       </div>
       <div class="hotel travel">
         <p class="hotel-label">Flying in?</p>
@@ -84,7 +87,12 @@
           <p class="day-name">Thursday</p>
           <p class="day-date">July 1</p>
           <h4>Arrival Day</h4>
-          <p>Check in at the Hilton Garden Inn, Mt. Laurel. More details coming soon.</p>
+          <ul class="timeline">
+            <li><span>Arrive</span>Check in at the <a href="https://www.hilton.com/en/hotels/phlmtgi-hilton-garden-inn-mt-laurel/" target="_blank" rel="noopener">Hilton Garden Inn Mt. Laurel</a></li>
+            <li><span>Relax</span>Enjoy the indoor pool, fitness center and catching up in the lobby</li>
+            <li><span>Dinner</span>Grab food together at a spot near the hotel</li>
+          </ul>
+          <p class="day-note-soft">🏨 Nightly room rates coming soon.</p>
         </article>
         <article class="day">
           <div class="day-photos">
@@ -94,26 +102,30 @@
           <p class="day-name">Friday</p>
           <p class="day-date">July 2</p>
           <h4>Family Day in Atlantic City</h4>
-          <ul>
-            <li>The Boardwalk</li>
-            <li>The beach</li>
-            <li>The casino</li>
+          <ul class="timeline">
+            <li><span>~2 hours</span>Atlantic City: walk the Boardwalk, hit the beach or try the casino</li>
+            <li><span>Lunch</span>Lunch together after we leave Atlantic City (or in AC if we find a good spot)</li>
+            <li><span>Evening</span>Family dinner at a seafood restaurant</li>
           </ul>
           <p class="day-note">👕 Wear your family T-shirts!</p>
+          <p class="day-note-soft">🏖️ Heading to the beach? Bring a beach chair from home.</p>
         </article>
         <article class="day">
-          <div class="day-photos">
+          <div class="day-photos four">
+            <img src="images/phl-rocky.jpg" alt="The Rocky Steps at the Philadelphia Museum of Art" loading="lazy">
+            <img src="images/phl-bell.jpg" alt="The Liberty Bell with Independence Hall behind it" loading="lazy">
             <img src="images/phl-indhall.jpg" alt="Independence Hall in Philadelphia" loading="lazy">
             <img src="images/phl-steak.jpg" alt="A Philly cheesesteak" loading="lazy">
           </div>
           <p class="day-name">Saturday</p>
           <p class="day-date">July 3</p>
           <h4>Philadelphia</h4>
-          <ul>
-            <li>Tour Philadelphia</li>
-            <li>Philly cheesesteaks for lunch</li>
-            <li>Back to the hotel to rest</li>
-            <li>Evening event at Keris’s house</li>
+          <ul class="timeline">
+            <li><span>10:00 AM</span>Leave the hotel for Philadelphia</li>
+            <li><span>~2 hours</span>See the Rocky Steps, the Liberty Bell and Independence Hall</li>
+            <li><span>Lunch</span>Philly cheesesteaks!</li>
+            <li><span>2:00 PM</span>Head back to the hotel to rest</li>
+            <li><span>6:00 PM</span>Family Extravaganza at Keris’s house</li>
           </ul>
         </article>
       </div>
@@ -179,7 +191,7 @@
   <footer>
     <p class="motto">“Love Will Keep Us Together”</p>
     <p>Robinson Family Reunion</p>
-    <p class="credits">Atlantic City photos: Tim Emerich and DimiTalen (CC0). Independence Hall: 颐园居 (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>). Cheesesteak: Shoshanah (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>). Via Wikimedia Commons.</p>
+    <p class="credits">Atlantic City photos: Tim Emerich and DimiTalen (CC0). Liberty Bell and Independence Hall: 颐园居; Rocky Steps: Dough4872 (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>). Cheesesteak: Shoshanah (<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>). Via Wikimedia Commons.</p>
   </footer>
 
   <dialog id="lightbox" aria-label="Photo viewer">
@@ -187,6 +199,6 @@
     <img id="lightbox-img" alt="">
   </dialog>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
