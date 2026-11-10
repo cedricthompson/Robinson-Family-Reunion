@@ -121,17 +121,61 @@ slidesEl.addEventListener("touchend", (e) => {
 show(0);
 restart();
 
-// Gallery + lightbox
-PHOTOS.forEach((p) => {
-  const btn = document.createElement("button");
-  btn.innerHTML = `<img loading="lazy" alt="${p.caption}">`;
-  btn.querySelector("img").src = `images/${p.file}`;
-  btn.addEventListener("click", () => {
-    lightboxImg.src = `images/${p.file}`;
-    lightboxImg.alt = p.caption;
-    lightbox.showModal();
+// ---------------------------------------------------------------
+// Photo gallery, grouped by reunion (accordion). To add a photo to a
+// section, add its file name to that section's list below.
+// ---------------------------------------------------------------
+const ALBUMS = [
+  { title: "Varnville, South Carolina", tag: "2026", note: "Cream reunion shirts",
+    files: ["photo-7.jpg", "photo-2.jpg", "photo-1.jpg", "photo-6.jpg", "photo-5.jpg", "photo-3.jpg", "photo-8.jpg", "photo-4.jpg"] },
+  { title: "New Orleans, Louisiana", tag: "15th Reunion", note: "Green, purple and yellow shirts",
+    files: ["photo-12.jpg", "photo-13.jpg", "photo-17.jpg", "photo-14.jpg", "photo-15.jpg", "photo-18.jpg", "photo-16.jpg", "photo-11.jpg", "photo-9.jpg", "photo-10.jpg"] },
+  { title: "Varnville, South Carolina", tag: "2023", note: "White shirts in the backyard",
+    files: ["photo-42.jpg", "photo-35.jpg", "photo-36.jpg", "photo-37.jpg", "photo-50.jpg", "photo-39.jpg", "photo-43.jpg", "photo-44.jpg", "photo-45.jpg", "photo-46.jpg", "photo-47.jpg", "photo-40.jpg", "photo-38.jpg", "photo-41.jpg", "photo-49.jpg", "photo-48.jpg"] },
+  { title: "Washington, D.C.", tag: "11th Reunion · 2019", note: "Red shirts",
+    files: ["photo-23.jpg", "photo-34.jpg", "photo-29.jpg", "photo-31.jpg", "photo-30.jpg", "photo-20.jpg", "photo-22.jpg", "photo-21.jpg", "photo-32.jpg", "photo-19.jpg", "photo-24.jpg", "photo-33.jpg", "photo-25.jpg", "photo-26.jpg", "photo-27.jpg", "photo-28.jpg"] },
+];
+
+const captionFor = Object.fromEntries(PHOTOS.map((p) => [p.file, p.caption]));
+
+ALBUMS.forEach((album, idx) => {
+  const details = document.createElement("details");
+  details.className = "album";
+  if (idx === 0) details.open = true;
+  details.innerHTML = `
+    <summary>
+      <span class="album-cover"><img alt="" loading="lazy"></span>
+      <span class="album-text">
+        <span class="album-tag"></span>
+        <span class="album-title"></span>
+        <span class="album-note"></span>
+      </span>
+      <span class="album-count"></span>
+      <span class="album-chevron" aria-hidden="true">⌄</span>
+    </summary>
+    <div class="album-grid"></div>`;
+  details.querySelector(".album-cover img").src = `images/${album.files[0]}`;
+  details.querySelector(".album-tag").textContent = album.tag;
+  details.querySelector(".album-title").textContent = album.title;
+  details.querySelector(".album-note").textContent = album.note;
+  details.querySelector(".album-count").textContent = `${album.files.length} photos`;
+  const albumGrid = details.querySelector(".album-grid");
+  album.files.forEach((file) => {
+    const caption = captionFor[file] || album.title;
+    const btn = document.createElement("button");
+    btn.innerHTML = `<img loading="lazy">`;
+    const img = btn.querySelector("img");
+    img.src = `images/${file}`;
+    img.alt = caption;
+    btn.setAttribute("aria-label", caption);
+    btn.addEventListener("click", () => {
+      lightboxImg.src = `images/${file}`;
+      lightboxImg.alt = caption;
+      lightbox.showModal();
+    });
+    albumGrid.appendChild(btn);
   });
-  grid.appendChild(btn);
+  grid.appendChild(details);
 });
 document.getElementById("close").addEventListener("click", () => lightbox.close());
 
