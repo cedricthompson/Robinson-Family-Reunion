@@ -11,7 +11,7 @@ const PHOTOS = [
   { file: "photo-3.jpg",  caption: "All smiles" },
   { file: "photo-8.jpg",  caption: "Love Comes Easy!" },
   { file: "photo-4.jpg",  caption: "Family selfie" },
-  { file: "photo-12.jpg", caption: "New Orleans · Jackson Square" },
+  { file: "photo-12.jpg", caption: "New Orleans · Jackson Square · 2024" },
   { file: "photo-13.jpg", caption: "The whole crew in the French Quarter" },
   { file: "photo-17.jpg", caption: "On the steps in New Orleans" },
   { file: "photo-14.jpg", caption: "New Orleans memories" },
@@ -128,7 +128,7 @@ restart();
 const ALBUMS = [
   { title: "Varnville, South Carolina", tag: "2026", note: "Cream reunion shirts",
     files: ["photo-7.jpg", "photo-2.jpg", "photo-1.jpg", "photo-6.jpg", "photo-5.jpg", "photo-3.jpg", "photo-8.jpg", "photo-4.jpg"] },
-  { title: "New Orleans, Louisiana", tag: "15th Reunion", note: "Green, purple and yellow shirts",
+  { title: "New Orleans, Louisiana", tag: "15th Reunion · 2024", note: "Green, purple and yellow shirts",
     files: ["photo-12.jpg", "photo-13.jpg", "photo-17.jpg", "photo-14.jpg", "photo-15.jpg", "photo-18.jpg", "photo-16.jpg", "photo-11.jpg", "photo-9.jpg", "photo-10.jpg"] },
   { title: "Varnville, South Carolina", tag: "2023", note: "White shirts in the backyard",
     files: ["photo-42.jpg", "photo-35.jpg", "photo-36.jpg", "photo-37.jpg", "photo-50.jpg", "photo-39.jpg", "photo-43.jpg", "photo-44.jpg", "photo-45.jpg", "photo-46.jpg", "photo-47.jpg", "photo-40.jpg", "photo-38.jpg", "photo-41.jpg", "photo-49.jpg", "photo-48.jpg"] },
