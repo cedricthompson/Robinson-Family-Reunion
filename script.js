@@ -40,6 +40,19 @@ const PHOTOS = [
   { file: "photo-35.jpg", caption: "Cookout · Varnville, SC · 2023" },
   { file: "photo-36.jpg", caption: "Serving up the food · 2023" },
   { file: "photo-37.jpg", caption: "Love Will Keep Us Together · 2023" },
+  { file: "photo-42.jpg", caption: "The ladies of 2023 · Varnville, SC" },
+  { file: "photo-50.jpg", caption: "The young cousins · 2023" },
+  { file: "photo-39.jpg", caption: "Love Will Keep Us Together" },
+  { file: "photo-43.jpg", caption: "All smiles at night" },
+  { file: "photo-44.jpg", caption: "Sun hats and smiles" },
+  { file: "photo-45.jpg", caption: "Cousins under the carport" },
+  { file: "photo-46.jpg", caption: "Family on the porch" },
+  { file: "photo-47.jpg", caption: "Front porch selfie" },
+  { file: "photo-40.jpg", caption: "Hanging out in the yard" },
+  { file: "photo-38.jpg", caption: "Big hugs" },
+  { file: "photo-41.jpg", caption: "Dinner under the trees" },
+  { file: "photo-49.jpg", caption: "Pretty in florals" },
+  { file: "photo-48.jpg", caption: "Still repping the 11th reunion" },
 ];
 
 const INTERVAL_MS = 5000;
