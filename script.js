@@ -135,3 +135,59 @@ PHOTOS.forEach((p) => {
 });
 document.getElementById("close").addEventListener("click", () => lightbox.close());
 
+// ---------------------------------------------------------------
+// Background music: The O'Jays – "Family Reunion" (the video at the top).
+// Browsers block sound until a visitor interacts with the page, so the
+// song starts on the first tap/click anywhere and keeps playing while
+// they scroll. The ♪ button in the corner pauses or resumes it.
+// ---------------------------------------------------------------
+(function backgroundMusic() {
+  const toggle = document.getElementById("music-toggle");
+  let player = null;
+  let ready = false;
+  let userPaused = false;   // visitor chose to stop the music
+  let started = false;
+
+  function setButton(playing) {
+    toggle.textContent = playing ? "❚❚ Pause music" : "♪ Play music";
+    toggle.setAttribute("aria-pressed", String(playing));
+  }
+
+  window.onYouTubeIframeAPIReady = () => {
+    player = new YT.Player("yt-music", {
+      events: {
+        onReady: () => { ready = true; toggle.hidden = false; player.setVolume(70); },
+        onStateChange: (e) => {
+          if (e.data === YT.PlayerState.PLAYING) { started = true; setButton(true); }
+          if (e.data === YT.PlayerState.PAUSED) setButton(false);
+          if (e.data === YT.PlayerState.ENDED) player.playVideo(); // keep looping
+        },
+      },
+    });
+  };
+  const api = document.createElement("script");
+  api.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(api);
+
+  // Start the song on the visitor's first tap, click or key press.
+  function firstInteraction(e) {
+    if (e.target === toggle) return; // the button handles itself
+    if (!ready || started || userPaused) return;
+    player.playVideo();
+  }
+  ["pointerdown", "keydown", "touchstart"].forEach((ev) =>
+    document.addEventListener(ev, firstInteraction, { passive: true })
+  );
+
+  toggle.addEventListener("click", () => {
+    if (!ready) return;
+    if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+      userPaused = true;
+      player.pauseVideo();
+    } else {
+      userPaused = false;
+      player.playVideo();
+    }
+  });
+})();
+

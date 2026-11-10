@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="style.css?v=15">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
 </head>
 <body>
@@ -65,7 +65,7 @@
         </figure>
       </div>
       <div class="hero-video">
-        <iframe src="https://www.youtube-nocookie.com/embed/i6zsg2GbLqc?rel=0" title="The O’Jays – Family Reunion" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe id="yt-music" src="https://www.youtube-nocookie.com/embed/i6zsg2GbLqc?rel=0&amp;enablejsapi=1&amp;loop=1&amp;playlist=i6zsg2GbLqc&amp;playsinline=1" title="The O’Jays – Family Reunion" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <p class="video-caption">♪ The O’Jays – “Family Reunion”</p>
     </section>
@@ -213,6 +213,8 @@
     <img id="lightbox-img" alt="">
   </dialog>
 
-  <script src="script.js?v=14"></script>
+  <button class="music-toggle" id="music-toggle" aria-pressed="false" hidden>♪ Play music</button>
+
+  <script src="script.js?v=15"></script>
 </body>
 </html>

@@ -56,6 +56,16 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.15;
 .info-cal { border: 2px solid var(--maroon-deep); color: var(--maroon-deep); }
 @media (max-width: 600px) { .info-actions { width: 100%; } }
 
+/* Background music button */
+.music-toggle {
+  position: fixed; right: 16px; bottom: 16px; z-index: 30;
+  padding: 11px 18px; border: none; border-radius: 999px; cursor: pointer;
+  background: var(--gold); color: var(--maroon-deep);
+  font: 600 .92rem "Inter", sans-serif; box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.music-toggle:hover { background: #e8b858; }
+.music-toggle[hidden] { display: none; }
+
 /* Hero */
 .hero {
   text-align: center;
