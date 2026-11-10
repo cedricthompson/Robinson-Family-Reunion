@@ -37,6 +37,9 @@ const PHOTOS = [
   { file: "photo-26.jpg", caption: "Dinner night" },
   { file: "photo-27.jpg", caption: "Dinner night" },
   { file: "photo-28.jpg", caption: "Dinner night" },
+  { file: "photo-35.jpg", caption: "Cookout · Varnville, SC · 2023" },
+  { file: "photo-36.jpg", caption: "Serving up the food · 2023" },
+  { file: "photo-37.jpg", caption: "Love Will Keep Us Together · 2023" },
 ];
 
 const INTERVAL_MS = 5000;
