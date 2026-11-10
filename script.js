@@ -21,6 +21,22 @@ const PHOTOS = [
   { file: "photo-11.jpg", caption: "A night out in the Quarter" },
   { file: "photo-9.jpg",  caption: "Around town" },
   { file: "photo-10.jpg", caption: "Around town" },
+  { file: "photo-23.jpg", caption: "11th Reunion · Washington, D.C. · 2019" },
+  { file: "photo-34.jpg", caption: "Robinson Family Reunion 2019" },
+  { file: "photo-29.jpg", caption: "Family by the river" },
+  { file: "photo-31.jpg", caption: "The elders" },
+  { file: "photo-30.jpg", caption: "The young cousins" },
+  { file: "photo-20.jpg", caption: "The ladies in red" },
+  { file: "photo-22.jpg", caption: "Little cousins by the river" },
+  { file: "photo-21.jpg", caption: "Snuggles with the baby" },
+  { file: "photo-32.jpg", caption: "Roller skating fun" },
+  { file: "photo-19.jpg", caption: "Seafood at Captain White's" },
+  { file: "photo-24.jpg", caption: "Dressed in yellow" },
+  { file: "photo-33.jpg", caption: "All smiles in yellow" },
+  { file: "photo-25.jpg", caption: "Dinner night" },
+  { file: "photo-26.jpg", caption: "Dinner night" },
+  { file: "photo-27.jpg", caption: "Dinner night" },
+  { file: "photo-28.jpg", caption: "Dinner night" },
 ];
 
 const INTERVAL_MS = 5000;
